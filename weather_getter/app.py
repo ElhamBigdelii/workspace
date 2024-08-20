@@ -41,7 +41,7 @@ if response.status_code != 200 or response.content == b"":
     print(f'The connection failed because of: {response.reason}')
     sys.exit()
 
-curent_date = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+curent_date = datetime.today().strftime('%Y-%m-%d %H-%M-%S')
 file_name = city_name + '_' + curent_date + '.txt'
 
 with open(file_name,"w") as resultFile:
