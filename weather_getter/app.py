@@ -15,7 +15,7 @@ url = f'https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={lo
 
 response = req.get(url)
 
-curent_date = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+curent_date = datetime.today().strftime('%Y-%m-%d %H-%M-%S')
 file_name = city_name + '_' + curent_date + '.txt'
 file = open(file_name,"w")
 file.write(json.dumps(response.json(),indent=4))
